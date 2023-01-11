@@ -14,11 +14,42 @@
     <!-- Modal start -->
     <div class="modal-bg">
       <div class="modal">
-        <h2>Subscribe to our thang</h2>
-        <input type="text" placeholder="Name...">
-        <input type="text" placeholder="Email...">
-        <button class="btn">Subscribe</button>
-        <span class="modal-close">X</span>
+        <h2>Sign In</h2>
+        <form action="https://httpbin.org/post" method="POST">
+          <label for="email"></label>
+          <input
+            type="text"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <label for="password"></label>
+          <input
+            oninput="return formvalid()"
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+            id="pass"
+            autocomplete="off"
+          />
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png"
+            onclick="show()"
+            id="showimg"
+          />
+          <span id="vaild-pass"></span>
+          <button class="btn">SIGN IN</button>
+        </form>
+        <div class="close-div"><span class="modal-close">X</span></div>
+        <div class="paragraph">
+          <p class="text--center">
+            Not a member? <a href="#">Sign up now</a>
+            <svg class="icon">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </p>
+        </div>
       </div>
     </div>
     <!-- Modal end -->
@@ -33,7 +64,8 @@
           <h2
             data-aos="fade-right"
             data-aos-offset="600"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+          >
             КОНЦЕПТ <br />
             АРТ
           </h2>
@@ -41,7 +73,8 @@
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
             data-aos-delay="200"
-            data-aos-offset="0">
+            data-aos-offset="0"
+          >
             Научись мыслить, как концепт-художник, <br />
             придумывать и воплощать в жизнь <br />
             оригинальные идеи
@@ -51,7 +84,8 @@
             id="modal-btn"
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="400">
+            data-aos-duration="400"
+          >
             записаться на курс
           </button>
         </div>
@@ -66,7 +100,8 @@
           class="leftDiv"
           data-aos="fade-right"
           data-aos-offset="300"
-          data-aos-easing="ease-in-sine">
+          data-aos-easing="ease-in-sine"
+        >
           <img src="./images/white-robo.png" alt="not photo" />
         </div>
         <div class="rightDiv" data-aos="fade-up" data-aos-duration="2000">
@@ -95,7 +130,8 @@
         <div
           class="card cardWidth"
           data-aos="fade-down-right"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+        >
           <div class="box"><p>1</p></div>
           <p>
             С нуля создавать стилизованные 3D-модели архитектуры, окружения и
@@ -105,21 +141,24 @@
         <div
           class="card cardWidth"
           data-aos="fade-down-left"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+        >
           <div class="box"><p>2</p></div>
           <p>Настраивать базовые материалы создавать простые текстуры</p>
         </div>
         <div
           class="card cardWidth"
           data-aos="fade-up-right"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+        >
           <div class="box"><p>3</p></div>
           <p>Настраивать сцену, освещение и камеру для рендеринга</p>
         </div>
         <div
           class="card cardWidth"
           data-aos="fade-up-left"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+        >
           <div class="box"><p>4</p></div>
           <p>Создавать анимацию разной сложности</p>
         </div>
@@ -246,7 +285,12 @@
 
     <!-- Section 6 start -->
     <section id="section6">
-      <button class="btn" id="modal-btn" data-aos="flip-down" data-aos-duration="3000">
+      <button
+        class="btn"
+        id="modal-btn"
+        data-aos="flip-down"
+        data-aos-duration="3000"
+      >
         <h4>ЗАПИСАТЬСЯ НА КУРС</h4>
         <br />
         <span>2 месяца</span>
@@ -258,7 +302,8 @@
             class="div1 divs"
             data-aos="fade-right"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+          >
             <img src="./images/TickSquare.png" alt="notPhoto" />
             <p>Доступ ко всем лекциям курса</p>
           </div>
@@ -267,7 +312,8 @@
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
             data-aos-delay="300"
-            data-aos-offset="0">
+            data-aos-offset="0"
+          >
             <img src="./images/TickSquare.png" alt="notPhoto" />
             <p>Доступ в IQMO community</p>
           </div>
@@ -275,7 +321,8 @@
             class="div3 divs"
             data-aos="fade-left"
             data-aos-offset="300"
-            data-aos-easing="ease-in-sine">
+            data-aos-easing="ease-in-sine"
+          >
             <img src="./images/TickSquare.png" alt="notPhoto" />
             <p>Индивидуальная проверка домашки</p>
           </div>
@@ -344,14 +391,12 @@
     </footer>
     <!-- footer end -->
 
-
-
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    
+
     <script src="js/script.js"></script>
   </body>
 </html>

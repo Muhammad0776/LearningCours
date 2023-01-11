@@ -23,12 +23,39 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Modal
   modalBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      modalBg.classList.add("bg-active");
-    });
+    btn.addEventListener("click", () => modalBg.classList.add("bg-active"));
   });
 
-  modalClose.addEventListener("click", () => {
-    modalBg.classList.remove("bg-active");
-  });
+  modalClose.addEventListener("click", () =>
+    modalBg.classList.remove("bg-active")
+  );
 });
+
+// Sign In password input
+const vaildPass = document.querySelector("#vaild-pass"),
+  pass = document.querySelector("#pass"),
+  showImg = document.querySelector("#showimg");
+
+function formvalid() {
+  let vaildpass = pass.value;
+
+  if (vaildpass.length <= 8 || vaildpass.length >= 20) {
+    vaildPass.innerHTML = "Minimum 8 characters";
+    return false;
+  } else {
+       vaildPass.innerHTML = "";
+       return true
+  }
+}
+
+function show() {
+  let x = pass;
+  if (x.type === "password") {
+    x.type = "text";
+    showImg.src = "https://static.thenounproject.com/png/777494-200.png";
+  } else {
+    x.type = "password";
+    showImg.src =
+      "https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png";
+  }
+}

@@ -18,7 +18,7 @@ $bgActive: #cf4918;
 
 * {
   padding: 0;
-  margin: 0;
+  margin: auto 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -635,19 +635,50 @@ body {
       font-family: "Montserrat";
       background-color: #fff;
       width: 30%;
-      height: 30%;
+      height: 40%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       flex-direction: column;
       border-radius: 10px;
 
+      h2 {
+        margin-bottom: 14px;
+      }
+
       input {
-        width: 60%;
-        height: 30px;
+        background: #fafafa;
+        font-size: 1em;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        padding: 18px 1rem;
+        border: none;
+        border-bottom: 2px solid #e9e9e9;
+        color: #666;
+        transition: border-color 0.3s;
+
+        &:focus {
+          border-bottom: 2px solid #c0c0c0;
+          outline: none;
+        }
+      }
+
+      #vaild-pass {
+        color: red;
+        margin: 16px 0;
+        font-size: 14px;
+      }
+
+      #showimg {
+        position: absolute;
+        height: 20px;
+        top: 160px;
+        right: 50px;
+        cursor: pointer;
       }
 
       .btn {
+        display: block;
         padding: 10px 30px;
         background-color: #2980b9;
         color: #fff;
@@ -655,12 +686,39 @@ body {
         font-family: "Montserrat";
         cursor: pointer;
       }
+
+      .close-div {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        @include display();
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        border: 1px solid #111;
+      }
+    }
+
+    .paragraph {
+      text-align: center;
+      margin: 13px 0;
+
+      a {
+        color: rgb(92, 91, 91);
+        outline: 0;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
 
     .modal-close {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 8px;
+      right: 10.5px;
       font-weight: bold;
       cursor: pointer;
     }
@@ -671,4 +729,26 @@ body {
     opacity: 1;
     z-index: 999;
   }
+}
+
+// Responsive desktop, planshet & mobile
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
